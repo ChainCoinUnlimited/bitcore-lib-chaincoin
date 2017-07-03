@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 var chai = require('chai');
 var RpcClient = require('../');
 var util = require('util');
@@ -526,4 +527,19 @@ describe('RpcClient', function() {
 
   });
 
+=======
+var should = require('chai').should();
+var bitcore = require('../');
+
+describe('#versionGuard', function() {
+  it('global._bitcore should be defined', function() {
+    should.equal(global._bitcore, bitcore.version);
+  });
+
+  it('throw an error if version is already defined', function() {
+    (function() {
+      bitcore.versionGuard('version');
+    }).should.throw('More than one instance of bitcore');
+  });
+>>>>>>> e80be6ee0cb8fbd012261a41f6f163446b9a5ba2
 });
