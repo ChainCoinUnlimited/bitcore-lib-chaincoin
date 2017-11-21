@@ -5040,57 +5040,56 @@ function removeNetwork(network) {
   }
 }
 
-addNetwork({
-  name: 'livenet',
-  alias: 'mainnet',
-  pubkeyhash: 0x4c,
-  privatekey: 0xcc,
-  scripthash: 0x10,
-  xpubkey: 0x488b21e,    // 'xpub' (Bitcoin Default)
-  xprivkey: 0x488ade4,   // 'xprv' (Bitcoin Default)
-  networkMagic: 0xbf0c6bbd,
-  port: 9999,
-  dnsSeeds: [
-    'dnsseed.darkcoin.io',
-    'dnsseed.dashdot.io',
-    'dnsseed.masternode.io',
-    'dnsseed.dashpay.io'
-  ]
-});
+    addNetwork({
+      name: 'livenet',
+      alias: 'mainnet',
+      pubkeyhash: 0x1c,
+      privatekey: 0x04,
+      scripthash: 0x9c,
+      xpubkey: 0x02fe52f8,    // 'xpub'
+      xprivkey: 0x02fe52cc,   // 'xprv'
+      networkMagic: 0xbf0c6bbd,
+      port: 11994,
+      dnsSeeds: [
+        'dnsseed.hashunlimited.com',
+        'dnsseed.chaincoin.org',
+        'dnsseed.pm-tech.at',
+      ]
+    });
 
-/**
- * @instance
- * @member Networks#livenet
- */
-var livenet = get('livenet');
+    /**
+     * @instance
+     * @member Networks#livenet
+     */
+    var livenet = get('livenet');
 
-addNetwork({
-  name: 'testnet',
-  alias: 'regtest',
-  pubkeyhash: 0x8c,
-  privatekey: 0xef,
-  scripthash: 0x13,
-  xpubkey: 0x43587cf,     // 'tpub' (Bitcoin Default)
-  xprivkey: 0x04358394    // 'tprv' (Bitcoin Default)
-});
+    addNetwork({
+      name: 'testnet',
+      alias: 'regtest',
+      pubkeyhash: 0x50,
+      privatekey: 0x2c,
+      scripthash: 0xd8,
+      xpubkey: 0x3a8061a0,     // 'tpub'
+      xprivkey: 0x3a805837    // 'tprv'
+    });
 
-/**
- * @instance
- * @member Networks#testnet
- */
-var testnet = get('testnet');
+    /**
+     * @instance
+     * @member Networks#testnet
+     */
+    var testnet = get('testnet');
 
-// Add configurable values for testnet/regtest
+    // Add configurable values for testnet/regtest
 
-var TESTNET = {
-  PORT: 19999,
-  NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xcee2caff),
-  DNS_SEEDS: [
-    'testnet-seed.darkcoin.io',
-    'testnet-seed.dashdot.io',
-    'test.dnsseed.masternode.io'
-  ]
-};
+    var TESTNET = {
+      PORT: 21994,
+      NETWORK_MAGIC: BufferUtil.integerAsBuffer(0xcee2caff),
+      DNS_SEEDS: [
+        'testnet-seed.hashunlimited.com',
+        'testnet-seed.chaincoin.org',
+      ]
+    };
+
 
 for (var key in TESTNET) {
   if (!_.isObject(TESTNET[key])) {
@@ -11380,7 +11379,7 @@ var Unit = require('./unit');
  * @example
  * ```javascript
  *
- * var uri = new URI('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6?amount=1.2');
+ * var uri = new URI('chaincoin:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6?amount=1.2');
  * console.log(uri.address, uri.amount);
  * ```
  *
@@ -11443,7 +11442,7 @@ URI.fromObject = function fromObject(json) {
  * @example
  * ```javascript
  *
- * var valid = URI.isValid('dash:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6');
+ * var valid = URI.isValid('chaincoin:XsV4GHVKGTjQFvwB7c6mYsGV3Mxf7iser6');
  * // true
  * ```
  *
@@ -11470,8 +11469,8 @@ URI.isValid = function(arg, knownParams) {
 URI.parse = function(uri) {
   var info = URL.parse(uri, true);
 
-  if (info.protocol !== 'dash:') {
-    throw new TypeError('Invalid dash URI');
+  if (info.protocol !== 'chaincoin:') {
+    throw new TypeError('Invalid chaincoin URI');
   }
 
   // workaround to host insensitiveness
@@ -11495,7 +11494,7 @@ URI.prototype._fromObject = function(obj) {
   /* jshint maxcomplexity: 10 */
 
   if (!Address.isValid(obj.address)) {
-    throw new TypeError('Invalid dash address');
+    throw new TypeError('Invalid chaincoin address');
   }
 
   this.address = new Address(obj.address);
@@ -11565,7 +11564,7 @@ URI.prototype.toString = function() {
   _.extend(query, this.extras);
 
   return URL.format({
-    protocol: 'dash:',
+    protocol: 'chaincoin:',
     host: this.address,
     query: query
   });
@@ -25923,7 +25922,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@^6.0.0",
-  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-dash/node_modules/browserify-sign",
+  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-chaincoin/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -28288,7 +28287,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@^6.0.0",
-  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-dash/node_modules/create-ecdh",
+  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-chaincoin/node_modules/create-ecdh",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -32445,7 +32444,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_shasum": "865c9b420bfbe55006b9f969f97a0d2c44966595",
   "_spec": "elliptic@=3.0.3",
-  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-dash",
+  "_where": "/media/alex/DATA/github/namespace/dashevo/bitcore-lib-chaincoin",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -66303,7 +66302,7 @@ function block(c, tweak, b, off) {
 }
 },{"./helper":266,"./op":270}],274:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-chaincoin",
   "version": "0.15.0",
   "description": "A pure and powerful JavaScript Dash library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -66365,7 +66364,7 @@ module.exports={
     },
     {
       "name": "Jon Kindel",
-      "email": "jon@dash.org"
+      "email": "jon@chaincoin.org"
     },
     {
       "name": "Alex Werner",
@@ -66373,7 +66372,7 @@ module.exports={
     }
   ],
   "keywords": [
-    "dash",
+    "chaincoin",
     "chaincoin",
     "transaction",
     "address",
@@ -66391,12 +66390,12 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddashvo/bitcore-lib-dash.git"
+    "url": "https://github.com/ddashvo/bitcore-lib-chaincoin.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashore-lib-dash/issues"
+    "url": "https://github.com/dashevo/dashore-lib-chaincoin/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcoredash-dash",
+  "homepage": "https://github.com/dashevo/bitcoredash-chaincoin",
   "browser": {
     "request": "browser-request"
   },
@@ -66410,7 +66409,7 @@ module.exports={
     "sha512": "=0.0.1",
     "c11-hash-js": "^1.0.0"
   },
-  "devDependencies"dash    "bitcore-build-dash": dashhpay/bitcore-build-dash",
+  "devDependencies"chaincoin    "bitcore-build-chaincoin": dashhpay/bitcore-build-chaincoin",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
