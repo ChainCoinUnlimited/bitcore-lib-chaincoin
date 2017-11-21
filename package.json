@@ -1,5 +1,5 @@
 {
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-chaincoin",
   "version": "0.15.0",
   "description": "A pure and powerful JavaScript Dash library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -86,12 +86,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "https://github.com/dashevo/bitcore-lib-chaincoin.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/dashevo/bitcore-lib-chaincoin/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/dashevo/bitcore-lib-chaincoin",
   "browser": {
     "request": "browser-request"
   },
@@ -106,7 +106,7 @@
     "c11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashpay/bitcore-build-dash",
+    "bitcore-build-chaincoin": "ChainCoinUnlimited/bitcore-build-chaincoin",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
