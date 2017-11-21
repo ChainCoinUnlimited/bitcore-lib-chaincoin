@@ -70,6 +70,7 @@
   ],
   "keywords": [
     "dash",
+    "chaincoin",
     "transaction",
     "address",
     "p2p",
@@ -86,12 +87,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-chaincoin.git"
+    "url": "https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-chaincoin/issues"
+    "url": "https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-chaincoin",
+  "homepage": "https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin",
   "browser": {
     "request": "browser-request"
   },
