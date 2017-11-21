@@ -33,7 +33,7 @@ Allow to create a govObj from a json or stringifiedJSON obj
 ####  `fromString`
 Allow to create a govObj from an hex string
 ####  `checkedSerialize`
-Return an hexa string that can be used in dashd CLI
+Return an hexa string that can be used in chaincoind CLI
 ####  `serialize`
 Return an hexa string
 ####  `inspect`
