@@ -1,15 +1,15 @@
-Bitcore-Dash Library
+Bitcore-Chaincoin Library
 =======
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-lib-chaincoin.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-lib-chaincoin)
 [![Build Status](https://img.shields.io/travis/ChainCoinUnlimited/bitcore-lib-chaincoin.svg?branch=master&style=flat-square)](https://travis-ci.org/ChainCoinUnlimited/bitcore-lib-chaincoin)
 [![Coverage Status](https://img.shields.io/coveralls/ChainCoinUnlimited/bitcore-lib-chaincoin.svg?style=flat-square)](https://coveralls.io/github/ChainCoinUnlimited/bitcore-lib-chaincoin?branch=master)
 
-A pure and powerful JavaScript Dash library.
+A pure and powerful JavaScript Chaincoin library.
 
 ## Principles
 
-Dash is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Dash network allows for highly resilient chaincoin infrastructure, and the developer community needs reliable, open-source tools to implement chaincoin apps and services.
+Chaincoin is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Chaincoin network allows for highly resilient chaincoin infrastructure, and the developer community needs reliable, open-source tools to implement chaincoin apps and services.
 
 ## Get Started
 
@@ -36,8 +36,8 @@ To get community assistance and ask for help with implementation questions, plea
 * [Generate a address from a SHA256 hash](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#generate-a-address-from-a-sha256-hash)
 * [Import an address via WIF](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#import-an-address-via-wif)
 * [Create a Transaction](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#create-a-transaction)
-* [Sign a Dash message](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#sign-a-bitcoin-message)
-* [Verify a Dash message](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#verify-a-bitcoin-message)
+* [Sign a Chaincoin message](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#sign-a-bitcoin-message)
+* [Verify a Chaincoin message](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#verify-a-bitcoin-message)
 * [Create an OP RETURN transaction](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#create-an-op-return-transaction)
 * [Create a 2-of-3 multisig P2SH address](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#create-a-2-of-3-multisig-p2sh-address)
 * [Spend from a 2-of-2 multisig P2SH address](https://github.com/ChainCoinUnlimited/bitcore-lib-chaincoin/blob/master/docs/examples.md#spend-from-a-2-of-2-multisig-p2sh-address)

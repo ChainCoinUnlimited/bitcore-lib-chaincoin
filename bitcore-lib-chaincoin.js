@@ -35878,7 +35878,7 @@ module.exports = Array.isArray || function (arr) {
     var objectCtorString = funcToString.call(Object);
 
     /** Used to restore the original `_` reference in `_.noConflict`. */
-    var oldDash = root._;
+    var oldChaincoin = root._;
 
     /** Used to detect if a method is native. */
     var reIsNative = RegExp('^' +
@@ -50110,7 +50110,7 @@ module.exports = Array.isArray || function (arr) {
      */
     function noConflict() {
       if (root._ === this) {
-        root._ = oldDash;
+        root._ = oldChaincoin;
       }
       return this;
     }
@@ -66304,7 +66304,7 @@ function block(c, tweak, b, off) {
 module.exports={
   "name": "bitcore-lib-chaincoin",
   "version": "0.15.0",
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript Chaincoin library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
